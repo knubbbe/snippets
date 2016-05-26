@@ -1,6 +1,6 @@
-/*
- * PUT THIS IN functions.php
- */
+### PUT THIS IN functions.php
+
+```php
 add_filter( 'acf/load_value/type=gallery', 'my_acf_load_translated_attachment', 10, 3 );
 add_filter( 'acf/load_value/type=image', 'my_acf_load_translated_attachment', 10, 3 );
 
@@ -22,3 +22,4 @@ function my_acf_load_translated_attachment($value, $post_id, $field) {
 
 	return $newValue;
 }
+```

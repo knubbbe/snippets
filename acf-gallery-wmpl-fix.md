@@ -8,11 +8,11 @@ function my_acf_load_translated_attachment($value, $post_id, $field) {
 	$newValue = $value;
 
 	// Make sure we are using WPML
-	if ( function_exists('icl_object_id') ) {
+	if (function_exists('icl_object_id')) {
 		// Galleries come in arrays
-		if ( is_array($value) ) {
+		if (is_array($value)) {
 			$newValue = array();
-			foreach ($value as $key => $id) {
+			foreach($value as $key => $id) {
 				$newValue[$key] = icl_object_id($id, 'attachment');
 			}
 		} else {
